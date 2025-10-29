@@ -1,157 +1,150 @@
-/* === General Styles === */
+/* === General Reset === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    background: #f4f6f8;
-    color: #222;
-    line-height: 1.6;
-  }
-  
-  /* === Header === */
-  header {
-    background: linear-gradient(90deg, #0078D7, #00B4D8);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* === Navigation === */
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    background: #0a0a23;
-    padding: 0.8rem;
-    flex-wrap: wrap;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.2s;
-  }
-  
-  nav a:hover {
-    color: #00B4D8;
-    transform: scale(1.1);
-  }
-  
-  /* === Main Content === */
-  main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #0a0a23;
-  }
-  
-  .main-content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-  
-  .card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* === About Me Section === */
-  .about-me-card img {
-    width: 150px;
-    border-radius: 50%;
-    margin-top: 1rem;
-    border: 3px solid #0078D7;
-  }
-  
-  .card-content-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .country-info {
-    margin-top: 2rem;
-  }
-  
-  .country-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .country-details img {
-    width: 120px;
-    border-radius: 10px;
-    margin-top: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* === Web Dev Resources === */
-  .card-web-resources ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .card-web-resources li {
-    margin: 0.7rem 0;
-  }
-  
-  .card-web-resources a {
-    text-decoration: none;
-    color: #0078D7;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .card-web-resources a:hover {
-    color: #00B4D8;
-    text-decoration: underline;
-  }
-  
-  /* === Footer === */
-  footer {
-    text-align: center;
-    background: #0a0a23;
-    color: white;
-    padding: 1rem;
-    font-size: 0.9rem;
-    margin-top: 3rem;
-    letter-spacing: 0.5px;
-  }
-  
-  /* === Responsive Design === */
-  @media (max-width: 768px) {
-    .main-content-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .about-me-card img {
-      width: 120px;
-    }
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fb;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* === Header & Nav === */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+#course-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc33;
+}
+
+/* === Main Content === */
+main {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #003366;
+}
+
+/* === Cards === */
+.main-content-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* === About Me Section === */
+.card-content-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-content-top img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.country-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.country-details img {
+  width: 120px;
+  border-radius: 10px;
+}
+
+.country-details p {
+  flex: 1;
+}
+
+/* === Resource Links === */
+.card-web-resources ul {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+.card-web-resources li {
+  margin-bottom: 0.7rem;
+}
+
+.card-web-resources a {
+  color: #003366;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-web-resources a:hover {
+  color: #007acc;
+  text-decoration: underline;
+}
+
+/* === Footer === */
+footer {
+  margin-top: 2rem;
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
