@@ -63,12 +63,11 @@
     font-weight: 500;
     transition: all 0.3s ease;
   }
-  
   nav a:hover {
-    color: var(--accent-color);
+    color: #3498db;
     text-decoration: underline;
-    transform: scale(1.05);
   }
+  
   
   /* ---------- Main Section ---------- */
   main {
@@ -88,8 +87,16 @@
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
   }
+  
+  figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
   
   figure {
     background: white;
@@ -103,12 +110,11 @@
     transform: translateY(-5px);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
   }
-  
   img {
     width: 100%;
     height: auto;
-    display: block;
   }
+  
   
   figcaption {
     text-align: center;
