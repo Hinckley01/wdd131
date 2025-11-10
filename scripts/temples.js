@@ -1,36 +1,22 @@
-// ------------------------------
-// Temple Album - JavaScript
-// ------------------------------
+// ===========================
+// Temple Album JavaScript
+// Author: Hinckley Ohaegbulem
+// ===========================
 
-// ✅ 1. Responsive Navigation (Hamburger Menu)
+// ----- Hamburger Menu -----
 const menuButton = document.querySelector("#menu");
-const navMenu = document.querySelector("nav ul");
+const navList = document.querySelector("nav ul");
 
 menuButton.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-  // Optional: Change icon for open/close effect
-  menuButton.classList.toggle("active");
+  navList.classList.toggle("open");
 });
 
-// ✅ 2. Dynamic Copyright Year
-const yearSpan = document.querySelector("#currentYear");
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
-}
+// ----- Footer Date and Time -----
+const yearSpan = document.getElementById("currentYear");
+const lastModified = document.getElementById("lastModified");
 
-// ✅ 3. Display Last Modified Date
-const lastModified = document.querySelector("#lastModified");
-if (lastModified) {
-  const modifiedDate = new Date(document.lastModified);
-  lastModified.innerHTML = `<span class="highlight">Last Modified:</span> ${modifiedDate.toLocaleString()}`;
-}
+// Display current year
+yearSpan.textContent = new Date().getFullYear();
 
-// ✅ 4. Optional: Add small animation to menu button (just for nice design)
-if (menuButton) {
-  menuButton.addEventListener("mouseenter", () => {
-    menuButton.style.transform = "scale(1.1)";
-  });
-  menuButton.addEventListener("mouseleave", () => {
-    menuButton.style.transform = "scale(1)";
-  });
-}
+// Display last modified date of the document
+lastModified.innerHTML = `<span class="highlight">Last Modification:</span> ${document.lastModified}`;

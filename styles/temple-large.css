@@ -1,31 +1,29 @@
-/* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-    #menu {
-      display: block;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      background-color: var(--primary-color);
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 200px;
-      display: none;
-      padding: 1rem;
-    }
-  
-    nav ul.open {
-      display: flex;
-    }
-  
-    nav li {
-      margin: 0.8rem 0;
-    }
-  
-    .nameholder {
-      font-size: 1.4rem;
-    }
+/* ---------- Larger Screen Adjustments ---------- */
+@media (min-width: 900px) {
+  header {
+    padding: 1.5rem 3rem;
   }
-  
-    
+
+  nav ul {
+    gap: 2rem;
+  }
+
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  figure img {
+    border-radius: 15px;
+  }
+
+  figcaption {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  footer {
+    font-size: 1rem;
+    padding: 1.5rem 2rem;
+  }
+}
