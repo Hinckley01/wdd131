@@ -2,42 +2,35 @@
 // Temple Album - JavaScript
 // ------------------------------
 
-// ✅ Responsive Navigation (Hamburger Menu)
+// ✅ 1. Responsive Navigation (Hamburger Menu)
 const menuButton = document.querySelector("#menu");
 const navMenu = document.querySelector("nav ul");
 
-// Set initial hamburger icon
-menuButton.textContent = "☰"; 
-
 menuButton.addEventListener("click", () => {
   navMenu.classList.toggle("open");
-
-  // Toggle icon between ☰ (hamburger) and ✖ (close)
-  if (navMenu.classList.contains("open")) {
-    menuButton.textContent = "✖";
-  } else {
-    menuButton.textContent = "☰";
-  }
+  // Optional: Change icon for open/close effect
+  menuButton.classList.toggle("active");
 });
 
-// ✅ Dynamic Copyright Year
+// ✅ 2. Dynamic Copyright Year
 const yearSpan = document.querySelector("#currentYear");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
 
-// ✅ Display Last Modified Date
+// ✅ 3. Display Last Modified Date
 const lastModified = document.querySelector("#lastModified");
 if (lastModified) {
   const modifiedDate = new Date(document.lastModified);
   lastModified.innerHTML = `<span class="highlight">Last Modified:</span> ${modifiedDate.toLocaleString()}`;
 }
 
-// ✅ Optional hover animation (nice touch)
-menuButton.addEventListener("mouseenter", () => {
-  menuButton.style.transform = "scale(1.2)";
-  menuButton.style.transition = "transform 0.2s ease";
-});
-menuButton.addEventListener("mouseleave", () => {
-  menuButton.style.transform = "scale(1)";
-});
+// ✅ 4. Optional: Add small animation to menu button (just for nice design)
+if (menuButton) {
+  menuButton.addEventListener("mouseenter", () => {
+    menuButton.style.transform = "scale(1.1)";
+  });
+  menuButton.addEventListener("mouseleave", () => {
+    menuButton.style.transform = "scale(1)";
+  });
+}
