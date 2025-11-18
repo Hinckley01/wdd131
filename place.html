@@ -22,26 +22,26 @@
 
 <body>
   <header>
-    <h1>Explore Nigeria 🇳🇬</h1>
+    <h1>Explore Nigeria <span class="flag">🇳🇬</span></h1>
   </header>
 
   <main>
     <!-- HERO IMAGE SECTION -->
     <section class="hero">
       <picture>
-        <!-- Large screens first -->
+        <!-- Large screens -->
         <source srcset="image/hero-large.webp" media="(min-width: 1000px)">
-        <!-- Medium screens next -->
+        <!-- Medium screens -->
         <source srcset="image/hero-medium.webp" media="(min-width: 500px)">
-        <!-- Small screens (default) -->
-        <img src="image/" alt="Scenic view of Nigeria" width="500" height="250">
+        <!-- Small screens (fixed missing file name) -->
+        <img src="image/hero-small.webp" alt="Scenic view of Nigeria" width="500" height="250">
       </picture>
-      
     </section>
 
     <!-- DATA SECTION -->
     <section class="data">
       <h2>Country Data</h2>
+
       <p class="label">Area:</p>
       <p class="value">923,768 Sq Km</p>
 
@@ -69,7 +69,8 @@
 
     <!-- WEATHER SECTION -->
     <section class="weather">
-      <h2>Weather <span class="weather-icon">⛅</span></h2>
+      <h2>Weather <img src="image/8726446_wind_sun_icon.svg" alt="weather icon" class="weather-icon"></h2>
+
       <div class="weatherinfo">
         <p>Temperature: <span id="temperature">28</span>°C</p>
         <p>Condition: <span id="condition">Sunny</span></p>
@@ -81,10 +82,11 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© <span id="currentYear">2025</span> 🌍 Hinckley Ohaegbulem | Nigeria 🇳🇬</p>
+    <p>© <span id="currentYear"></span> 🌍 Hinckley Ohaegbulem | Nigeria 🇳🇬</p>
     <p id="lastModified">
       <span class="highlight">Last Modification:</span>
     </p>
   </footer>
+
 </body>
 </html>
