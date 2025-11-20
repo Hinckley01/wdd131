@@ -1,0 +1,128 @@
+/* Base Reset + Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Dark mode class */
+  body.dark {
+    background-color: #1f1f1f;
+    color: #ddd;
+  }
+  
+  /* Header styling */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #00ff99;
+  }
+  header h1 {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #1f1f1f;
+  }
+  /* Nav */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  nav li + li {
+    margin-left: 1rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: #1f1f1f;
+    font-weight: bold;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Grid container for temple cards */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  /* Each temple figure as a card */
+  figure {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  body.dark figure {
+    background-color: #2a2a2a;
+    border-color: #444;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  }
+  figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  /* Image styling inside cards */
+  figure img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 160px;
+  }
+  
+  /* Figcaption styling */
+  figcaption {
+    padding: 1rem;
+  }
+  figcaption h3 {
+    margin-top: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+  }
+  figcaption p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #00ff99;
+    color: #1f1f1f;
+    margin-top: 2rem;
+  }
+  body.dark footer {
+    background-color: #00dfff;
+    color: #1f1f1f;
+  }
+  
+  /* Dark / Light toggle button (mini) */
+  #darkToggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #00ff99;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  body.dark #darkToggle {
+    background-color: #00dfff;
+  }
+  
