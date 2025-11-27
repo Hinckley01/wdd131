@@ -1,141 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtered Temple Album | Hinckley Ohaegbulem</title>
-  
-    <!-- ✅ SEO Meta Description (under 160 chars) -->
-    <meta name="description" content="Temple Album by Hinckley Ohaegbulem for WDD 131: Dynamic Web Fundamentals at BYU–Idaho. Explore beautiful temple images.">
-  
-    <!-- ✅ Author -->
-    <meta name="author" content="Hinckley Ohaegbulem">
-  
-    <!-- ✅ Keywords for SEO -->
-    <meta name="keywords" content="Temple Album, WDD 131, Hinckley Ohaegbulem, BYU–Idaho, web development, photo gallery, responsive design">
-  
-    <!-- ✅ Social Preview (Optional but boosts SEO) -->
-    <meta property="og:title" content="Temple Album by Hinckley Ohaegbulem">
-    <meta property="og:description" content="A responsive Temple Album project created for WDD 131 at BYU–Idaho.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="image/aba-nigeria-temple-lds-273999-wallpaper.jpg">
-  
-    <!-- ✅ Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
-    <!-- ✅ Required CSS Files (to fix your missing file errors) -->
-    <link rel="stylesheet" href="styles/flitered-temple.css">
-    <link rel="stylesheet" href="styles/filtered-temple-large.css">
-  
-    <!-- ✅ JavaScript -->
-    <script src="scripts/temples.js" defer></script>
-  </head>
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album | Hinckley Ohaegbulem</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Temple Album by Hinckley Ohaegbulem for WDD 131: Dynamic Web Fundamentals at BYU–Idaho. Explore beautiful temple images.">
+  <meta name="author" content="Hinckley Ohaegbulem">
+  <meta name="keywords" content="Temple Album, WDD 131, Hinckley Ohaegbulem, BYU–Idaho, web development, photo gallery, responsive design">
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="Temple Album by Hinckley Ohaegbulem">
+  <meta property="og:description" content="A responsive Temple Album project created for WDD 131 at BYU–Idaho.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="image/aba-nigeria-temple-lds-273999-wallpaper.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/temple.css">
+
+  <!-- JS -->
+  <script src="scripts/temples.js" defer></script>
+</head>
 <body>
   <header>
     <h1 class="nameholder">Temple Album</h1>
     <button id="menu" title="hamburger menu" aria-label="Menu">&#9776;</button>
-
     <nav id="navMenu">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Old</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Large</a></li>
-        <li><a href="#">Small</a></li>
+        <li><a href="#" data-filter="home">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2 class="home">Home</h2>
-    <div class="container home">
-        <figure>
-            <img src="image/billings-montana-temple.jpg" alt="Billings Montana Temple" loading="lazy">
-            <figcaption>
-              <h3>Billings Montana Temple</h3>
-              <p><strong>Size:</strong> 33,800 sq ft</p>
-              <p><strong>Location:</strong> Billings, Montana, USA</p>
-            </figcaption>
-          </figure>
-          
-          <figure>
-            <img src="image/aba-nigeria-temple.jpg" alt="Aba Nigeria Temple" loading="lazy">
-            <figcaption>
-              <h3>Aba Nigeria Temple</h3>
-              <p><strong>Size:</strong> 11,500 sq ft</p>
-              <p><strong>Location:</strong> Aba, Abia State, Nigeria</p>
-            </figcaption>
-          </figure>
-          
-          <figure>
-            <img src="image/albuquerque-temple.jpg" alt="Albuquerque Temple" loading="lazy">
-            <figcaption>
-              <h3>Albuquerque New Mexico Temple</h3>
-              <p><strong>Size:</strong> 34,245 sq ft</p>
-              <p><strong>Location:</strong> Albuquerque, New Mexico, USA</p>
-            </figcaption>
-          </figure>
-          
-      <figure>
-        <img src="image/belem_brazil_temple.jpg" alt="Belem Brazil Temple" loading="lazy">
-
-        <figcaption>
-          <h3>Belém Brazil Temple</h3>
-          <p><strong>Size:</strong> 28,000 sq ft</p>
-          <p><strong>Location:</strong> Belém, Pará, Brazil</p>
-        </figcaption>
-      </figure>
-      <figure>
-        <img src="image/chicago's-temple.jpg" alt="Chicago Temple">
-        <figcaption>
-          <h3>Chicago Illinois Temple</h3>
-          <p><strong>Size:</strong> 37,062 sq ft</p>
-          <p><strong>Location:</strong> Chicago, Illinois, USA</p>
-        </figcaption>
-      </figure>
-      
-      <figure>
-        <img src="image/columbia-river-temple.jpg" alt="Columbia River Temple" loading="lazy">
-        <figcaption>
-          <h3>Columbia River Washington Temple</h3>
-          <p><strong>Size:</strong> 16,000 sq ft</p>
-          <p><strong>Location:</strong> Richland, Washington, USA</p>
-        </figcaption>
-      </figure>
-      
-      <figure>
-        <img src="image/durban-southafrica-temple.jpg" alt="Durban South Africa Temple" loading="lazy">
-        <figcaption>
-          <h3>Durban South Africa Temple</h3>
-          <p><strong>Size:</strong> 19,000 sq ft</p>
-          <p><strong>Location:</strong> Durban, KwaZulu-Natal, South Africa</p>
-        </figcaption>
-      </figure>
-      
-      <figure>
-        <img src="image/kona-hawaii-temple.jpg" alt="Kona Hawaii Temple" loading="lazy">
-        <figcaption>
-          <h3>Kona Hawaii Temple</h3>
-          <p><strong>Size:</strong> 10,700 sq ft</p>
-          <p><strong>Location:</strong> Kailua-Kona, Hawaii, USA</p>
-        </figcaption>
-      </figure>
-      
-      <figure>
-        <img src="image/newport-beach-temple.jpg" alt="Newport Beach Temple" loading="lazy">
-
-        <figcaption>
-          <h3>Newport Beach California Temple</h3>
-          <p><strong>Size:</strong> 17,000 sq ft</p>
-          <p><strong>Location:</strong> Newport Beach, California, USA</p>
-        </figcaption>
-      </figure>
-      
+    <div class="container" id="templeContainer">
+      <!-- JS will dynamically insert temple cards here -->
     </div>
   </main>
+
   <footer>
     <p>© <span id="currentYear"></span> Hinckley Ohaegbulem, Nigeria 🎮</p>
     <p id="lastModified"><span class="highlight">Last Modified:</span> <span id="modifiedDate"></span></p>

@@ -1,6 +1,4 @@
-// =======================
-// TEMPLE DATA (Required 10)
-// =======================
+// ===== Data: Temple Array (10 entries) =====
 const temples = [
   {
     name: "Billings Montana Temple",
@@ -65,26 +63,18 @@ const temples = [
     area: 17000,
     imageUrl: "image/newport-beach-temple.jpg"
   },
-  {
-    name: "London England Temple",
-    location: "London, England",
-    dedicated: "1958-09-07",
-    area: 42000,
-    imageUrl: "image/london-temple.jpg"
-  }
 ];
 
-// =======================
-// RENDER FUNCTION
-// =======================
+// ===== Render Function =====
 function renderTemples(list) {
-  const container = document.querySelector(".container");
-  container.innerHTML = ""; // clear old content
+  const container = document.getElementById("templeContainer");
+  container.innerHTML = ""; // clear
 
   list.forEach(t => {
-    const figure = document.createElement("figure");
+    const fig = document.createElement("figure");
+    fig.classList.add("card");
 
-    figure.innerHTML = `
+    fig.innerHTML = `
       <img src="${t.imageUrl}" alt="${t.name}" loading="lazy">
       <figcaption>
         <h3>${t.name}</h3>
@@ -93,54 +83,42 @@ function renderTemples(list) {
         <p><strong>Size:</strong> ${t.area.toLocaleString()} sq ft</p>
       </figcaption>
     `;
-
-    container.appendChild(figure);
+    container.appendChild(fig);
   });
 }
 
-// =======================
-// FILTER BUTTONS
-// =======================
+// ===== FILTERS + MENU =====
 document.addEventListener("DOMContentLoaded", () => {
-  renderTemples(temples); // default (Home)
+  renderTemples(temples);
 
-  document.querySelector("a[href='#Old']").addEventListener("click", () => {
-    const oldTemples = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
-    renderTemples(oldTemples);
+  const nav = document.getElementById("navMenu");
+  const menuBtn = document.getElementById("menu");
+  menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("open");
   });
 
-  document.querySelector("a[href='#New']").addEventListener("click", () => {
-    const newTemples = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
-    renderTemples(newTemples);
+  nav.querySelectorAll("a[data-filter]").forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const filter = link.dataset.filter;
+
+      let filtered = [];
+      if (filter === "home") {
+        filtered = temples;
+      } else if (filter === "old") {
+        filtered = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+      } else if (filter === "new") {
+        filtered = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+      } else if (filter === "large") {
+        filtered = temples.filter(t => t.area > 90000);
+      } else if (filter === "small") {
+        filtered = temples.filter(t => t.area < 10000);
+      }
+      renderTemples(filtered);
+    });
   });
 
-  document.querySelector("a[href='#Large']").addEventListener("click", () => {
-    const largeTemples = temples.filter(t => t.area > 90000);
-    renderTemples(largeTemples);
-  });
-
-  document.querySelector("a[href='#Small']").addEventListener("click", () => {
-    const smallTemples = temples.filter(t => t.area < 10000);
-    renderTemples(smallTemples);
-  });
-
-  document.querySelector("a[href='#Home']").addEventListener("click", () => {
-    renderTemples(temples);
-  });
+  // Footer data
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+  document.getElementById("modifiedDate").textContent = document.lastModified;
 });
-
-// =======================
-// HAMBURGER MENU
-// =======================
-const menuBtn = document.querySelector("#menu");
-const navMenu = document.querySelector("#navMenu");
-
-menuBtn.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-});
-
-// =======================
-// FOOTER DATES
-// =======================
-document.getElementById("currentYear").textContent = new Date().getFullYear();
-document.getElementById("modifiedDate").textContent = document.lastModified;
