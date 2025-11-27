@@ -63,6 +63,13 @@ const temples = [
     area: 17000,
     imageUrl: "image/newport-beach-temple.jpg"
   },
+  {
+    name: "Benin City Nigeria Temple",
+    location: "Benin City, Edo State, Nigeria",
+    dedicated: "2019-09-01",
+    area: 12500,
+    imageUrl: "image/benin_city_nigeria_temple.jpeg"
+  }
 ];
 
 // ===== Render Function =====
