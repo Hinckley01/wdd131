@@ -1,0 +1,175 @@
+/* ================= Global Styles ================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: #007BFF; /* subtle blue */
+    border-bottom: 3px solid #00C6FF; /* neat underline */
+    padding-bottom: 0.5rem;
+}
+
+
+/* Glowing underline */
+h1::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #007BFF, #00C6FF, #FF6B6B);
+    box-shadow: 0 0 8px rgba(0,198,255,0.7), 0 0 12px rgba(255,107,107,0.5);
+}
+
+
+/* ================= Form Container ================= */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.product-review-form {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-review-form:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= Labels & Inputs ================= */
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: #222;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-top: 0.3rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0,123,255,0.3);
+    outline: none;
+}
+
+/* ================= Rating Stars ================= */
+#rating {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+#rating label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#rating input {
+    display: none; /* hide radio buttons */
+}
+
+/* ================= Checkboxes ================= */
+div span.italic-text {
+    font-style: italic;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+div label {
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* ================= Textarea ================= */
+textarea {
+    resize: vertical;
+}
+
+/* ================= Submit Button ================= */
+input[type="submit"] {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: #007BFF;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* ================= Footer ================= */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer .highlight {
+    font-weight: 700;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+    .product-review-form {
+        padding: 2rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #rating {
+        flex-wrap: wrap;
+    }
+}
