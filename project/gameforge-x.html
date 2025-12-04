@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameForge X | Home</title>
+  <meta name="description" content="GameForge X – Your hub for gaming news, reviews, gear, and tech gadgets." />
+  <meta name="author" content="Hinckley Ohaegbulem" />
+  <link rel="stylesheet" href="styles/gameforge-x.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Bebas+Neue&family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="scripts/gameforge-x.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">GameForge X</h1>
+    <button id="menu" class="menu-btn">☰</button>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="news.html">Gaming News</a></li>
+        <li><a href="reviews.html">Gear Reviews</a></li>
+        <li><a href="gadgets.html">Tech Gadgets</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <h2>Welcome to the Ultimate Gaming & Tech Hub</h2>
+      <p>Your one-stop spot for gaming news, patches, reviews, and next-gen gadgets.</p>
+      <picture>
+        <source srcset="image/setup-large.webp" media="(min-width: 1000px)">
+        <source srcset="image/setup-medium.webp" media="(min-width: 600px)">
+        <img src="image/setup-small.webp" alt="Futuristic gaming setup" loading="lazy">
+      </picture>
+    </section>
+
+    <!-- FEATURED AREAS -->
+    <section class="features">
+      <h3>Explore the Forge</h3>
+      <div class="feature-grid">
+        <article>
+          <h4 class="title-orbitron">Gaming News</h4>
+          <p>Get the latest updates, patch notes, and trending reports on your favourite titles.</p>
+          <a href="news.html" class="btn-accent">Read News</a>
+        </article>
+
+        <article>
+          <h4 class="title-orbitron">Gear Reviews</h4>
+          <p>See expert and community-backed reviews for gaming mice, keyboards, headsets, and more.</p>
+          <a href="reviews.html" class="btn-accent">See Reviews</a>
+        </article>
+
+        <article>
+          <h4 class="title-orbitron">Tech Gadgets</h4>
+          <p>Discover top-tier gadgets for your gaming, streaming, or office setup.</p>
+          <a href="gadgets.html" class="btn-accent">Browse Gadgets</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <h3>Join the Forge Community</h3>
+      <p>Sign up to get weekly updates, exclusive reviews, and patch explanations delivered straight to you.</p>
+      <form id="subscribeForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><span id="currentYear"></span> © GameForge X. All rights reserved.</p>
+    <p id="lastModified">Last Modified: <span></span></p>
+    <a href="references.html">References</a>
+  </footer>
+</body>
+</html>

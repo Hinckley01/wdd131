@@ -1,0 +1,220 @@
+/* ==========================
+   GENERAL RESET & BASE
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==========================
+   HEADER
+========================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1b1b1b;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #444;
+}
+
+.logo {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  color: #ff4d4f;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav ul.show-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #1b1b1b;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 1rem 2rem;
+  border-left: 2px solid #ff4d4f;
+}
+
+.nav a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #ff4d4f;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ff4d4f;
+  cursor: pointer;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+.hero, .reviews-hero, .community-hero, .gadgets-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/setup-large.webp') center/cover no-repeat;
+}
+
+.hero h2, .reviews-hero h2, .community-hero h2, .gadgets-hero h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff4d4f;
+}
+
+.hero p, .reviews-hero p, .community-hero p, .gadgets-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==========================
+   FEATURE GRID
+========================== */
+.feature-grid, .review-grid, .gadgets-grid, .posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.feature-grid article, .review-grid article, .gadgets-grid article, .posts-grid article {
+  background-color: #1b1b1b;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-grid article:hover, .review-grid article:hover, .gadgets-grid article:hover, .posts-grid article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #ff4d4f;
+}
+
+.title-orbitron {
+  font-family: 'Orbitron', sans-serif;
+  color: #ff4d4f;
+  margin-bottom: 0.5rem;
+}
+
+.btn-accent {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff4d4f;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-accent:hover {
+  background-color: #e63b3f;
+}
+
+/* ==========================
+   NEWSLETTER FORM
+========================== */
+.newsletter, .community-signup {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #111;
+  border-top: 2px solid #ff4d4f;
+}
+
+.newsletter form, .community-signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 1rem auto 0;
+}
+
+.newsletter input, .community-signup input, .community-signup textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+}
+
+.newsletter button, .community-signup button {
+  padding: 0.7rem 1.5rem;
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter button:hover, .community-signup button:hover {
+  background-color: #e63b3f;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1b1b1b;
+  border-top: 2px solid #ff4d4f;
+  margin-top: 2rem;
+}
+
+.footer a {
+  color: #ff4d4f;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media(max-width:768px){
+  .menu-btn {
+    display: block;
+  }
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
